@@ -1,0 +1,104 @@
+
+// HERO ---------------
+
+.job-container {
+  max-width: 965px;
+}
+
+
+// LOADING MESSAGE -----
+.loading {
+  display: none;
+  padding: 50px 0;
+  text-align: center;
+  font-family: $title-font;
+  font-size: 2rem;
+  color: $primary-color;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.loading.active {
+  display: block;
+}
+
+// SORT BUTTONS ---------
+
+.filter-container {
+  padding-top: 15px;
+  text-align: center;
+
+  button {
+    font-family: $title-font;
+    font-size: .65rem;
+    text-transform: uppercase;
+    color: $grey-medium;
+    border: 1px solid $grey-light;
+    background: $white;
+    padding: 10px 15px;
+    transition: all .3s;
+  }
+
+  button:hover {
+    background: $primary-color;
+    color: $white;
+
+  }
+}
+
+// PRODUCT LIST ---------
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid $grey-light;
+  padding: 0;
+}
+
+
+// LOAD MORE BUTTON ------
+.see-more {
+  display: none;
+}
+
+.see-more.active {
+  display: block;
+  background-color: $primary-color;
+  color: $white;
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid $primary-color;
+  padding: 10px 15px;
+  margin: 0 auto;
+  transition: all .3s;
+}
+
+.see-more.active:hover {
+  background: $white;
+  color: $primary-color
+}
+
+// MEDIA QUERIES -------------------
+
+@media all and (min-width: 370px) {
+  .filter-container {
+    button {
+      font-size: .8rem;
+    }
+  }
+}
+
+@media all and (min-width: $mq-small) {
+
+  .filter-container {
+    text-align: right;
+
+    button {
+      font-size: 1rem;
+    }
+  }
+}

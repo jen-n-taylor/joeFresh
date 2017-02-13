@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Joe Fresh | Clothing</title>
+	<link rel="stylesheet" href="public/styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script id="product-template" type="text/x-handlebars-template">
+			<li class="product-item">
+				<img class="img1" src="{{thumbnails.b2}}" alt="{{productName}}" />
+				<span class="product-badge">{{productBadgeString}}</span>
+				<h2 class="product-title">{{productName}}</h2>
+				<p class="product-price"><span>$</span>{{productPrice}}</p>
+				<span class="product-color">
+					<img src="{{swatchImage}}" alt="{{productColor}}" title="{{productColor}}"/>
+				</span>
+			</li>
+	</script>
+
+</head>
+
+
+<body>
+
+	<header>
+		<div class="container">
+			<h1>Joe Fresh</h1>
+
+			<span class="mobile-menu" onclick="openMobileNav()">&#9776; Menu
+			</span>
+
+			<nav class="global-nav">
+					<span class="close" onclick="closeMobileNav()">&#x2715;</span>
+					<ul class="main-nav">
+						<li>
+							<a href="">New</a>
+						</li>
+						<li>
+							<a href="">Active</a>
+						</li>
+						<li>
+							<a href="">Women</a>
+						</li>
+						<li>
+							<a href="">Men</a>
+						</li>
+						<li>
+							<a href="">Girls</a>
+						</li>
+						<li>
+							<a href="">Boys</a>
+						</li>
+						<li>
+							<a href="">Toddler Girl</a>
+						</li>
+						<li>
+							<a href="">Toddler Boy</a>
+						</li>
+						<li>
+							<a href="">Baby</a>
+						</li>
+						<li>
+							<a href="">Sale</a>
+						</li>
+						<li>
+							<a href="">Fresh Edit</a>
+						</li>
+					</ul>
+			</nav>
+		</div> <!-- /.container -->
+	</header>
+
+	<main>
+
+		<section>
+			<div class="container">
+				<div class="filter-container">
+					<button class="filter-alpha">Sort by Name (A-Z)</button>
+					<button class="filter-price">Sort by Price (low - high)</button>
+				</div>
+
+				<div class="product-container">
+					<p class="loading active">Loading . . .</p>
+
+					<div class="template-container">
+						<ul class="product-list">
+						</ul>
+					</div>
+
+
+
+					<button class="see-more">See more items </button>
+
+				</div> <!-- /.product-container -->
+
+
+			</div>
+		</section>
+
+
+
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+	<script src="public/scripts/main.js"></script>
+
+
+</body>
+</html>
